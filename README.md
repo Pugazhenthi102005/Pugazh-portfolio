@@ -32,7 +32,7 @@ Follow these steps to run the project locally:
 ### 1\. Clone the Repository
 
 ```bash
-
+gh repo clone Pugazhenthi102005/Pugazh-portfolio
 ```
 
 ### 2\. Install Dependencies
