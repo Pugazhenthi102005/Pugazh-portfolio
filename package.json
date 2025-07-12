@@ -1,39 +1,100 @@
 {
-  "name": "3dfolio",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+  "name": "zustand",
+  "description": "🐻 Bear necessities for state management in React",
+  "private": false,
+  "type": "commonjs",
+  "version": "5.0.3",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "typesVersions": {
+    ">=4.5": {
+      "esm/*": [
+        "esm/*"
+      ],
+      "*": [
+        "*"
+      ]
+    },
+    "*": {
+      "esm/*": [
+        "ts_version_4.5_and_above_is_required.d.ts"
+      ],
+      "*": [
+        "ts_version_4.5_and_above_is_required.d.ts"
+      ]
+    }
   },
-  "dependencies": {
-    "@emailjs/browser": "^3.10.0",
-    "@gsap/react": "^2.1.2",
-    "@heroicons/react": "^2.2.0",
-    "@react-three/drei": "^9.56.24",
-    "@react-three/fiber": "^8.11.1",
-    "email-js": "^2.0.3",
-    "framer-motion": "^9.0.7",
-    "gsap": "^3.12.7",
-    "maath": "^0.5.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.4.0",
-    "react-router-dom": "^6.8.1",
-    "react-tilt": "^1.0.2",
-    "react-vertical-timeline-component": "^3.6.0",
-    "three": "^0.172.0",
-    "vanilla-tilt": "^1.8.1"
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./esm/index.d.mts",
+        "default": "./esm/index.mjs"
+      },
+      "default": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      }
+    },
+    "./*": {
+      "import": {
+        "types": "./esm/*.d.mts",
+        "default": "./esm/*.mjs"
+      },
+      "default": {
+        "types": "./*.d.ts",
+        "default": "./*.js"
+      }
+    }
   },
-  "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.6",
-    "vite": "^4.1.0"
+  "files": [
+    "**"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=12.20.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmndrs/zustand.git"
+  },
+  "keywords": [
+    "react",
+    "state",
+    "manager",
+    "management",
+    "redux",
+    "store"
+  ],
+  "author": "Paul Henschel",
+  "contributors": [
+    "Jeremy Holcomb (https://github.com/JeremyRH)",
+    "Daishi Kato (https://github.com/dai-shi)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmndrs/zustand/issues"
+  },
+  "homepage": "https://github.com/pmndrs/zustand",
+  "packageManager": "pnpm@8.15.0",
+  "peerDependencies": {
+    "@types/react": ">=18.0.0",
+    "immer": ">=9.0.6",
+    "react": ">=18.0.0",
+    "use-sync-external-store": ">=1.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "immer": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "use-sync-external-store": {
+      "optional": true
+    }
   }
 }
